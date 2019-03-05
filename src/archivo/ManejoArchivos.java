@@ -28,7 +28,7 @@ public class ManejoArchivos {
         try {
             abrirArchivo();
             while (archivo.getFilePointer() < archivo.length())
-                System.out.println(archivo.readLong());
+                System.out.println(archivo.readDouble());
             archivo.close();
         }catch (Exception e) {
             e.printStackTrace();

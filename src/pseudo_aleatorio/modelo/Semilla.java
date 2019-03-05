@@ -31,13 +31,12 @@ public class Semilla {
     }
 
     public void elevarCuadrado() {
-        System.out.println(valor);
-        this.setValor(Math.pow(this.getValor(), 2));
+        this.valor = Math.pow(this.getValor(), 2);
     }
 
     public void agregarCeros() {
         NumberFormat nf = new DecimalFormat("##.###");
-        this.setValor_texto(nf.format(valor) + "");
+        this.valor_texto = nf.format(valor) + "";
         StringBuffer sb = new StringBuffer(8);
 
         switch (valor_texto.length()) {
@@ -65,13 +64,11 @@ public class Semilla {
                 default:
                     break;
         }
-        this.setValor_texto(sb.toString() + valor_texto);
-        System.out.println(valor_texto);
+        this.valor_texto = sb.toString() + valor_texto;
     }
 
     public void extraerCentrales() {
         String centrales = valor_texto.substring(2, 6);
-        System.out.println("Centrales " + centrales);
-        this.setValor(Double.parseDouble(centrales));
+        this.valor = Double.parseDouble(centrales);
     }
 }
