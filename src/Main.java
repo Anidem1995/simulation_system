@@ -1,9 +1,10 @@
 import archivo.ManejoArchivos;
+import pseudo_aleatorio.VonNeumann;
 
 public class Main {
 
     public static void main(String[] args)
     {
-        new ManejoArchivos().escribir(65);
+        new VonNeumann().iterar(20);
     }
 }

@@ -13,11 +13,11 @@ public class ManejoArchivos {
         }
     }
 
-    public void escribir(long numero) {
+    public void escribir(double numero) {
         try {
             abrirArchivo();
             archivo.seek(archivo.length());
-            archivo.writeLong(numero);
+            archivo.writeDouble(numero);
             archivo.close();
         }catch (Exception e) {
             e.printStackTrace();
